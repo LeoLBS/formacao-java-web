@@ -21,5 +21,12 @@ public class PrimeiraClasseJava {
 		else {
 			System.out.println("Aluno reprovado!");
 		}
+		
+		
+		/*Operadores ternarios, podemos utilizar para micro validações*/
+		
+		String resultadoAluno = mediaAluno >= 60 ? "Aluno aprovado (Ternario)" : (mediaAluno >= 40 && mediaAluno <= 59) ? "Aluno em recuperação (Ternario)" :"Aluno reprovado (Ternario)";
+		
+		System.out.println(resultadoAluno);
 	}
 }
