@@ -28,5 +28,19 @@ public class PrimeiraClasseJava {
 		String resultadoAluno = mediaAluno >= 60 ? "Aluno aprovado (Ternario)" : (mediaAluno >= 40 && mediaAluno <= 59) ? "Aluno em recuperação (Ternario)" :"Aluno reprovado (Ternario)";
 		
 		System.out.println(resultadoAluno);
+		
+		
+		
+		/*Operações lógicas aninhadas: São operações dentro de operações*/
+		
+		if(mediaAluno >= 50) {  // 1º Operação
+			if(mediaAluno >= 60) {  // 2º Operação
+				System.out.println("Aluno aprovado! (Aninhado)");
+			}else {  // 1º Operação
+				System.out.println("Aluno em recuperação! (Aninhado)");
+			}
+		}else {  // 2º Operação
+			System.out.println("Aluno reprovado! (Aninhado)");
+		}
 	}
 }
