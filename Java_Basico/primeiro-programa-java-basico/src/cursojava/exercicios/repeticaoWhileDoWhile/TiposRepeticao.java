@@ -18,6 +18,8 @@ public class TiposRepeticao {
 	
 	public void utilizandoDoWhile() {
 		
+		/*Estrutura de repetição com do while*/
+		
 		int condicao = 5;
 		
 		do {  // O mesmo vai executar pelo menos uma vez antes de verificar a condição!
@@ -26,5 +28,14 @@ public class TiposRepeticao {
 			
 			
 		}while(condicao >= 10);
+	}
+	
+	public void utilizandoFor() {
+		
+		/*Estrutura de repetição com for*/
+		
+		for(int numeroX = 0; numeroX <= 5; numeroX++) {  // O mesmo vai executar enquanto a condição for verdadeira, assim definimos o número de vezes
+			System.out.println("Numero agora é: " + numeroX + " (For)");
+		}
 	}
 }

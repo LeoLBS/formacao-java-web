@@ -20,5 +20,6 @@ public class PrimeiraClasseJava {
 		
 		tipoRepeticao.utilizandoWhile();
 		tipoRepeticao.utilizandoDoWhile();
+		tipoRepeticao.utilizandoFor();
 	}
 }
