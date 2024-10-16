@@ -1,5 +1,6 @@
 package cursojava.exercicios;
 
+import cursojava.exercicios.repeticaoWhileDoWhile.TiposRepeticao;
 import cursojava.exercicios.tipoSWITCHandCASE.TipoComandoSwitchCase;
 import cursojava.exercicios.tiposIFandELSE.TiposOperadores;
 
@@ -8,6 +9,7 @@ public class PrimeiraClasseJava {
 		
 		TiposOperadores tipoOperadores = new TiposOperadores();
 		TipoComandoSwitchCase tipoComandoSwitchCase = new TipoComandoSwitchCase();
+		TiposRepeticao tipoRepeticao = new TiposRepeticao();
 		
 		tipoOperadores.operadoresIFeELSE();
 		tipoOperadores.operadoresAninhados();
@@ -15,5 +17,8 @@ public class PrimeiraClasseJava {
 		
 		
 		tipoComandoSwitchCase.utilizandoSwitchCase();
+		
+		tipoRepeticao.utilizandoWhile();
+		tipoRepeticao.utilizandoDoWhile();
 	}
 }
