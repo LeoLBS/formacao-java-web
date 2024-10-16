@@ -22,5 +22,6 @@ public class PrimeiraClasseJava {
 		tipoRepeticao.utilizandoDoWhile();
 		tipoRepeticao.utilizandoFor();
 		tipoRepeticao.utilizandoBreakFor();
+		tipoRepeticao.utilizandoContinueFor();
 	}
 }

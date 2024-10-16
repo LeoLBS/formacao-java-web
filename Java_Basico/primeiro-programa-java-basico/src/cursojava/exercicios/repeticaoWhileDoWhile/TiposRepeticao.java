@@ -43,12 +43,26 @@ public class TiposRepeticao {
 		
 		/*Estrutura de repetição com break no for*/
 		
-		for(int numeroX = 0; numeroX <= 10; numeroX++) {  // O mesmo vai executar enquanto a condição for verdadeira, assim definimos o número de vezes
+		for(int numeroX = 0; numeroX <= 10; numeroX++) { 
 			if(numeroX == 4) {
 				System.out.println("Numero foi encontrado que é: " + numeroX + " parando o programa (Break For)");
 				break;
 			}
 		}
 		
+	}
+	
+	public void utilizandoContinueFor() {
+		
+		/*Estrutura de repetição com continue no for*/
+		
+		for(int numeroX = 0; numeroX <= 7; numeroX++) {
+			if(numeroX == 3 || numeroX == 5 || numeroX == 6) {
+				System.out.println("Numero foi encontrado que é: " + numeroX + " (Continue For)");
+				continue;
+			}
+			
+			System.out.println("Numero atual: " + numeroX + " (Continue For)"); // Caso caia na condição do if que tem o continue esse trecho de codigo não vai exeutar
+		}
 	}
 }
