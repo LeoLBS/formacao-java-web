@@ -38,4 +38,17 @@ public class TiposRepeticao {
 			System.out.println("Numero agora é: " + numeroX + " (For)");
 		}
 	}
+	
+	public void utilizandoBreakFor() {
+		
+		/*Estrutura de repetição com break no for*/
+		
+		for(int numeroX = 0; numeroX <= 10; numeroX++) {  // O mesmo vai executar enquanto a condição for verdadeira, assim definimos o número de vezes
+			if(numeroX == 4) {
+				System.out.println("Numero foi encontrado que é: " + numeroX + " parando o programa (Break For)");
+				break;
+			}
+		}
+		
+	}
 }
