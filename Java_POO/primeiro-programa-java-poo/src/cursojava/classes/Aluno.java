@@ -15,4 +15,16 @@ public class Aluno {
 	String nomeEscolaAluno;
 	String serieMatriculadoAluno;
 	
+	public Aluno() { // Criando um construtor dentro da classe Aluno
+		// Esse tipo de construtor é padrão do Java, sem nenhum parametro
+	}
+	
+	public Aluno(String nomeAluno) { // Criando um construtor com parametro ja definido
+		this.nomeAluno = nomeAluno;
+	}
+	
+	public Aluno(String nomeAluno, int idadeAluno) {
+		this.nomeAluno = nomeAluno;
+		this.idadeAluno = idadeAluno;
+	}
 }
