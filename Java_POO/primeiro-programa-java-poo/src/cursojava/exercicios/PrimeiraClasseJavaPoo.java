@@ -10,11 +10,27 @@ public class PrimeiraClasseJavaPoo {
 		
 		Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
 		
-		aluno1.nomeAluno = "Pedro"; // Chamando e atribuindo um valor a uma variavel do tipo public da classe Aluno
-		aluno1.idadeAluno = 20;  // Tentando chamar e atribuir um valor na variavel do tipo private da classe Aluno
+		aluno1.setNomeAluno("Pedro"); // Utilizando o metodo set para definir o valor da variavel
+		aluno1.setIdadeAluno(18);
+		aluno1.setDataNascimentoAluno("20/09/2006");
+		aluno1.setRegistroGeralAluno("25364.435333.4657");
+		aluno1.setNumeroCpfAluno("723.723.723-99");
+		aluno1.setNomeMaeAluno("Maria");
+		aluno1.setNomePaiAluno("Carlos");
+		aluno1.setDataMatriculaAluno("10/04/2018");
+		aluno1.setSerieMatriculadoAluno("3");
+		aluno1.setNomeEscolaAluno("Escola de treinamento DEV");
 		
-		System.out.println("Nome do aluno é: " + aluno1.nomeAluno); // Mostrando o valor na variavel nomeAluno
-		System.out.println("Idade do aluno é: " + aluno1.idadeAluno); // Tentando mostrar o valor da variavel idadeAluno
+		System.out.println("Nome do aluno é: " + aluno1.getNomeAluno()); // Buscando o valor definido na variavel com o metodo get
+		System.out.println("Idade do aluno é: " + aluno1.getIdadeAluno());
+		System.out.println("Data de nascimento do aluno é: " + aluno1.getDataNascimentoAluno());
+		System.out.println("Registro geral do aluno é: " + aluno1.getRegistroGeralAluno());
+		System.out.println("CPF do aluno é: " + aluno1.getNumeroCpfAluno());
+		System.out.println("Nome da mae do aluno é: " + aluno1.getNomeMaeAluno());
+		System.out.println("Nome do pai do aluno é: " + aluno1.getNomePaiAluno());
+		System.out.println("Data da matricula do aluno: "+ aluno1.getDataMatriculaAluno());
+		System.out.println("Serie do aluno é: " + aluno1.getSerieMatriculadoAluno());
+		System.out.println("Escola do alunoe é: " + aluno1.getNomeEscolaAluno());
 		
 		Aluno aluno2 = new Aluno();
 		

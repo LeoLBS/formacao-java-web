@@ -4,16 +4,16 @@ package cursojava.classes;
 public class Aluno {
 	
 	/*Aqui temos os nossos atributos da nossa classe Aluno*/
-	public String nomeAluno; // Variavel é do tipo de acsso public
-	private int idadeAluno;  // Variavel é do tipo de acesso private
-	String dataNascimentoAluno;
-	String registroGeralAluno;
-	String numeroCpfAluno;
-	String nomeMaeAluno;
-	String nomePaiAluno;
-	String dataMatriculaAluno;
-	String nomeEscolaAluno;
-	String serieMatriculadoAluno;
+	private String nomeAluno;
+	private int idadeAluno;
+	private String dataNascimentoAluno;
+	private String registroGeralAluno;
+	private String numeroCpfAluno;
+	private String nomeMaeAluno;
+	private String nomePaiAluno;
+	private String dataMatriculaAluno;
+	private String nomeEscolaAluno;
+	private String serieMatriculadoAluno;
 	
 	public Aluno() { // Criando um construtor dentro da classe Aluno
 		// Esse tipo de construtor é padrão do Java, sem nenhum parametro
@@ -27,4 +27,89 @@ public class Aluno {
 		this.nomeAluno = nomeAluno;
 		this.idadeAluno = idadeAluno;
 	}
+	
+	/* Aqui vamos utilizar os GETTERS e SETTERS para os atributos privados da classe Aluno*/
+	
+	/* O GET serve para obter o valor que esta no atributo da classe*/
+	public String getNomeAluno() {
+		return nomeAluno; // Retornando o valor da variavel nomeAluno
+	}
+	
+	/* O SET serve para atribuir/modificar um valor no atributo da classe*/
+	public void setNomeAluno(String nomeAluno) {
+		this.nomeAluno = nomeAluno; // Utilizando o this para referenciar a variavel do objeto
+	}
+
+	public int getIdadeAluno() {
+		return idadeAluno;
+	}
+
+	public void setIdadeAluno(int idadeAluno) {
+		this.idadeAluno = idadeAluno;
+	}
+
+	public String getDataNascimentoAluno() {
+		return dataNascimentoAluno;
+	}
+
+	public void setDataNascimentoAluno(String dataNascimentoAluno) {
+		this.dataNascimentoAluno = dataNascimentoAluno;
+	}
+
+	public String getRegistroGeralAluno() {
+		return registroGeralAluno;
+	}
+
+	public void setRegistroGeralAluno(String registroGeralAluno) {
+		this.registroGeralAluno = registroGeralAluno;
+	}
+
+	public String getNumeroCpfAluno() {
+		return numeroCpfAluno;
+	}
+
+	public void setNumeroCpfAluno(String numeroCpfAluno) {
+		this.numeroCpfAluno = numeroCpfAluno;
+	}
+
+	public String getNomeMaeAluno() {
+		return nomeMaeAluno;
+	}
+
+	public void setNomeMaeAluno(String nomeMaeAluno) {
+		this.nomeMaeAluno = nomeMaeAluno;
+	}
+
+	public String getNomePaiAluno() {
+		return nomePaiAluno;
+	}
+
+	public void setNomePaiAluno(String nomePaiAluno) {
+		this.nomePaiAluno = nomePaiAluno;
+	}
+
+	public String getDataMatriculaAluno() {
+		return dataMatriculaAluno;
+	}
+
+	public void setDataMatriculaAluno(String dataMatriculaAluno) {
+		this.dataMatriculaAluno = dataMatriculaAluno;
+	}
+
+	public String getNomeEscolaAluno() {
+		return nomeEscolaAluno;
+	}
+
+	public void setNomeEscolaAluno(String nomeEscolaAluno) {
+		this.nomeEscolaAluno = nomeEscolaAluno;
+	}
+
+	public String getSerieMatriculadoAluno() {
+		return serieMatriculadoAluno;
+	}
+
+	public void setSerieMatriculadoAluno(String serieMatriculadoAluno) {
+		this.serieMatriculadoAluno = serieMatriculadoAluno;
+	}
+	
 }
