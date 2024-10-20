@@ -10,6 +10,12 @@ public class PrimeiraClasseJavaPoo {
 		
 		Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
 		
+		aluno1.nomeAluno = "Pedro"; // Chamando e atribuindo um valor a uma variavel do tipo public da classe Aluno
+		aluno1.idadeAluno = 20;  // Tentando chamar e atribuir um valor na variavel do tipo private da classe Aluno
+		
+		System.out.println("Nome do aluno é: " + aluno1.nomeAluno); // Mostrando o valor na variavel nomeAluno
+		System.out.println("Idade do aluno é: " + aluno1.idadeAluno); // Tentando mostrar o valor da variavel idadeAluno
+		
 		Aluno aluno2 = new Aluno();
 		
 		Aluno aluno3 = new Aluno();

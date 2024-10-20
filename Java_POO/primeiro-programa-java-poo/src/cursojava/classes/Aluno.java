@@ -4,8 +4,8 @@ package cursojava.classes;
 public class Aluno {
 	
 	/*Aqui temos os nossos atributos da nossa classe Aluno*/
-	String nomeAluno;
-	int idadeAluno;
+	public String nomeAluno; // Variavel é do tipo de acsso public
+	private int idadeAluno;  // Variavel é do tipo de acesso private
 	String dataNascimentoAluno;
 	String registroGeralAluno;
 	String numeroCpfAluno;
