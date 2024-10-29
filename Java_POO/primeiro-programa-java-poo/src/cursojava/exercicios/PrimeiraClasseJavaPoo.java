@@ -38,6 +38,7 @@ public class PrimeiraClasseJavaPoo {
 		System.out.println("Escola do alunoe é: " + aluno1.getNomeEscolaAluno());
 		
 		System.out.println("Média do Aluno: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		
 		Aluno aluno2 = new Aluno();
 		

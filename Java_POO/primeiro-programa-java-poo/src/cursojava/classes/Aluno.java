@@ -154,4 +154,17 @@ public class Aluno {
 		return (nota1 + nota2 + nota3 + nota4) /4;
 	}
 	
+	//Verificando seo Aluno esta aprovado ou não
+	public boolean getAlunoAprovado() {
+		
+		double media = this.getMediaNota();
+		
+		if(media >= 70) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 }
