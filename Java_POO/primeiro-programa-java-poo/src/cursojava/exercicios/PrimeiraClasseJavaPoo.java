@@ -21,6 +21,11 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setSerieMatriculadoAluno("3");
 		aluno1.setNomeEscolaAluno("Escola de treinamento DEV");
 		
+		aluno1.setNota1(90);
+		aluno1.setNota2(40.5);
+		aluno1.setNota3(70);
+		aluno1.setNota4(85);
+		
 		System.out.println("Nome do aluno é: " + aluno1.getNomeAluno()); // Buscando o valor definido na variavel com o metodo get
 		System.out.println("Idade do aluno é: " + aluno1.getIdadeAluno());
 		System.out.println("Data de nascimento do aluno é: " + aluno1.getDataNascimentoAluno());
@@ -31,6 +36,8 @@ public class PrimeiraClasseJavaPoo {
 		System.out.println("Data da matricula do aluno: "+ aluno1.getDataMatriculaAluno());
 		System.out.println("Serie do aluno é: " + aluno1.getSerieMatriculadoAluno());
 		System.out.println("Escola do alunoe é: " + aluno1.getNomeEscolaAluno());
+		
+		System.out.println("Média do Aluno: " + aluno1.getMediaNota());
 		
 		Aluno aluno2 = new Aluno();
 		
