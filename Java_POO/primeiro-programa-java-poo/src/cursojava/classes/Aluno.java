@@ -166,5 +166,14 @@ public class Aluno {
 			return false;
 		}
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Aluno [Nome Aluno=" + getNomeAluno() + ", Idade Aluno=" + getIdadeAluno() + ", dataNascimentoAluno="
+				+ dataNascimentoAluno + ", registroGeralAluno=" + registroGeralAluno + ", numeroCpfAluno="
+				+ numeroCpfAluno + ", nomeMaeAluno=" + nomeMaeAluno + ", nomePaiAluno=" + nomePaiAluno
+				+ ", dataMatriculaAluno=" + dataMatriculaAluno + ", nomeEscolaAluno=" + nomeEscolaAluno
+				+ ", serieMatriculadoAluno=" + serieMatriculadoAluno + ", nota1=" + nota1 + ", nota2=" + nota2
+				+ ", nota3=" + nota3 + ", nota4=" + nota4 + "]";
+	}
 }

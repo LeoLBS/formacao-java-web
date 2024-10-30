@@ -44,7 +44,13 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setNota3(Double.valueOf(nota3));
 		aluno1.setNota4(Double.valueOf(nota4));
 		
-		System.out.println("Nome do aluno é: " + aluno1.getNomeAluno()); // Buscando o valor definido na variavel com o metodo get
+		
+		//Mostrando a descrição do objeto na memoria
+		System.out.println(aluno1);
+		System.out.println("Media do aluno: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		
+		/*System.out.println("Nome do aluno é: " + aluno1.getNomeAluno()); // Buscando o valor definido na variavel com o metodo get
 		System.out.println("Idade do aluno é: " + aluno1.getIdadeAluno());
 		System.out.println("Data de nascimento do aluno é: " + aluno1.getDataNascimentoAluno());
 		System.out.println("Registro geral do aluno é: " + aluno1.getRegistroGeralAluno());
@@ -56,7 +62,7 @@ public class PrimeiraClasseJavaPoo {
 		System.out.println("Escola do alunoe é: " + aluno1.getNomeEscolaAluno());
 		
 		System.out.println("Média do Aluno: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));*/
 		
 	}
 }
