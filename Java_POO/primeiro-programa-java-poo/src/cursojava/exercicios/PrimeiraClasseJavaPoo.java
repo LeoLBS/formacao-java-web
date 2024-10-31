@@ -10,7 +10,7 @@ public class PrimeiraClasseJavaPoo {
 	/*Main é um metodo auto executavel em Java*/
 	public static void main(String[] args) {
 		
-		String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno: ");
+		/*String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno: ");
 		String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
 		String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento do aluno: ");
 		String registroGeralAluno = JOptionPane.showInputDialog("Qual o RG do aluno: ");
@@ -49,20 +49,28 @@ public class PrimeiraClasseJavaPoo {
 		System.out.println(aluno1);
 		System.out.println("Media do aluno: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		*/
 		
-		/*System.out.println("Nome do aluno é: " + aluno1.getNomeAluno()); // Buscando o valor definido na variavel com o metodo get
-		System.out.println("Idade do aluno é: " + aluno1.getIdadeAluno());
-		System.out.println("Data de nascimento do aluno é: " + aluno1.getDataNascimentoAluno());
-		System.out.println("Registro geral do aluno é: " + aluno1.getRegistroGeralAluno());
-		System.out.println("CPF do aluno é: " + aluno1.getNumeroCpfAluno());
-		System.out.println("Nome da mae do aluno é: " + aluno1.getNomeMaeAluno());
-		System.out.println("Nome do pai do aluno é: " + aluno1.getNomePaiAluno());
-		System.out.println("Data da matricula do aluno: "+ aluno1.getDataMatriculaAluno());
-		System.out.println("Serie do aluno é: " + aluno1.getSerieMatriculadoAluno());
-		System.out.println("Escola do alunoe é: " + aluno1.getNomeEscolaAluno());
 		
-		System.out.println("Média do Aluno: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));*/
+		// Equals e hashcode ( Diferenciar e comparar objetos )
 		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNomeAluno("Leo");
+		aluno2.setNumeroCpfAluno("123");
+		
+		Aluno aluno3 = new Aluno();
+		aluno3.setNomeAluno("Leo");
+		aluno3.setNumeroCpfAluno("123");
+		
+		//Mostrando o resultado se os dois objetos são iguais e os seus valores
+		if(aluno2.equals(aluno3)) {
+			System.out.println("Iguais!!");
+			System.out.println(aluno2);
+			System.out.println(aluno3);
+		}else {
+			System.out.println("Não são iguais!!");
+			System.out.println(aluno2);
+			System.out.println(aluno3);
+		}
 	}
 }

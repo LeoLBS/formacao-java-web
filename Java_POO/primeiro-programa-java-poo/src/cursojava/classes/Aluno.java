@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.Objects;
+
 /*Aqui temos nossa classe Aluno, sendo ela o nosso molde para os objetos*/
 public class Aluno {
 	
@@ -176,4 +178,24 @@ public class Aluno {
 				+ ", serieMatriculadoAluno=" + serieMatriculadoAluno + ", nota1=" + nota1 + ", nota2=" + nota2
 				+ ", nota3=" + nota3 + ", nota4=" + nota4 + "]";
 	}
+
+	
+	//Sobrescrevendo os metodos hashCode e equals
+	@Override
+	public int hashCode() {
+		return Objects.hash(nomeAluno, numeroCpfAluno);
+	}
+
+	@Override
+	public boolean equals(Object obj) {  //Classe Object principal
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nomeAluno, other.nomeAluno) && Objects.equals(numeroCpfAluno, other.numeroCpfAluno);
+	}
+	
 }
