@@ -10,7 +10,7 @@ public class PrimeiraClasseJavaPoo {
 	/*Main é um metodo auto executavel em Java*/
 	public static void main(String[] args) {
 		
-		/*String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno: ");
+		String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno: ");
 		String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
 		String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento do aluno: ");
 		String registroGeralAluno = JOptionPane.showInputDialog("Qual o RG do aluno: ");
@@ -21,9 +21,16 @@ public class PrimeiraClasseJavaPoo {
 		String serieMatriculadoAluno = JOptionPane.showInputDialog("Qual a serie do aluno: ");
 		String nomeEscolaAluno = JOptionPane.showInputDialog("Qual o nome da escola do aluno: ");
 		
+		String disciplina1 = JOptionPane.showInputDialog("Qual a disciplina 1 do aluno: ");
 		String nota1 = JOptionPane.showInputDialog("Qual a nota 1 do aluno: ");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Qual a disciplina 2 do aluno: ");
 		String nota2 = JOptionPane.showInputDialog("Qual a nota 2 do aluno: ");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Qual a disciplina 3 do aluno: ");
 		String nota3 = JOptionPane.showInputDialog("Qual a nota 3 do aluno: ");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Qual a disciplina 4 do aluno: ");
 		String nota4 = JOptionPane.showInputDialog("Qual a nota 4 do aluno: ");
 		
 		Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
@@ -44,33 +51,16 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setNota3(Double.valueOf(nota3));
 		aluno1.setNota4(Double.valueOf(nota4));
 		
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);
+		
 		
 		//Mostrando a descrição do objeto na memoria
 		System.out.println(aluno1);
 		System.out.println("Media do aluno: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		*/
 		
-		
-		// Equals e hashcode ( Diferenciar e comparar objetos )
-		
-		Aluno aluno2 = new Aluno();
-		aluno2.setNomeAluno("Leo");
-		aluno2.setNumeroCpfAluno("123");
-		
-		Aluno aluno3 = new Aluno();
-		aluno3.setNomeAluno("Leo");
-		aluno3.setNumeroCpfAluno("123");
-		
-		//Mostrando o resultado se os dois objetos são iguais e os seus valores
-		if(aluno2.equals(aluno3)) {
-			System.out.println("Iguais!!");
-			System.out.println(aluno2);
-			System.out.println(aluno3);
-		}else {
-			System.out.println("Não são iguais!!");
-			System.out.println(aluno2);
-			System.out.println(aluno3);
-		}
 	}
 }
