@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /*Aqui temos nossa classe Aluno, sendo ela o nosso molde para os objetos*/
@@ -17,15 +19,16 @@ public class Aluno {
 	private String nomeEscolaAluno;
 	private String serieMatriculadoAluno;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
+	
 	
 	public Aluno() { // Criando um construtor dentro da classe Aluno
 		// Esse tipo de construtor é padrão do Java, sem nenhum parametro
@@ -126,8 +129,7 @@ public class Aluno {
 	
 	//Metodo para calcular e retornar a media do aluno
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() 
-		+ disciplina.getNota3() + disciplina.getNota4()) /4;
+		return 0;
 	}
 	
 	//Verificando seo Aluno esta aprovado ou não
@@ -150,7 +152,7 @@ public class Aluno {
 				+ dataNascimentoAluno + ", registroGeralAluno=" + registroGeralAluno + ", numeroCpfAluno="
 				+ numeroCpfAluno + ", nomeMaeAluno=" + nomeMaeAluno + ", nomePaiAluno=" + nomePaiAluno
 				+ ", dataMatriculaAluno=" + dataMatriculaAluno + ", nomeEscolaAluno=" + nomeEscolaAluno
-				+ ", serieMatriculadoAluno=" + serieMatriculadoAluno + ", disciplina=" + disciplina + "]";
+				+ ", serieMatriculadoAluno=" + serieMatriculadoAluno + "]";
 	}
 
 	//Sobrescrevendo os metodos hashCode e equals
