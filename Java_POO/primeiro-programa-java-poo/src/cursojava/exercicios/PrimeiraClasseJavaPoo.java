@@ -36,33 +36,19 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setSerieMatriculadoAluno(serieMatriculadoAluno);
 		aluno1.setNomeEscolaAluno(nomeEscolaAluno);
 		
+		for(int posicao = 1; posicao <= 4; posicao++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da Disciplina " +posicao+ "?");
+			String notaDisciplina = JOptionPane.showInputDialog("Qual a nota da Disciplina " +posicao+ "?");		
+			
+			Disciplina disciplina = new Disciplina();
+			
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
-		Disciplina disciplina1 = new Disciplina();
-		disciplina1.setDisciplina("Banco de dados");
-		disciplina1.setNota(80);
-		
-		
-		
-		
-		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("Java");
-		disciplina2.setNota(90);
-		
-		
-		Disciplina disciplina3 = new Disciplina();
-		disciplina3.setDisciplina("WEB");
-		disciplina3.setNota(85);
-		
-		
-		Disciplina disciplina4 = new Disciplina();
-		disciplina4.setDisciplina("Redes");
-		disciplina4.setNota(75);
-		
-		
-		aluno1.getDisciplinas().add(disciplina1);
-		aluno1.getDisciplinas().add(disciplina2);
-		aluno1.getDisciplinas().add(disciplina3);
-		aluno1.getDisciplinas().add(disciplina4);
+
 		
 		//Mostrando a descrição do objeto na memoria
 		System.out.println(aluno1);
