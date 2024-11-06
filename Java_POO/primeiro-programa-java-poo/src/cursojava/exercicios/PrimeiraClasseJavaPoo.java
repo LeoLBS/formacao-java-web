@@ -37,6 +37,7 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setNomeEscolaAluno(nomeEscolaAluno);
 		
 		for(int posicao = 1; posicao <= 4; posicao++) {
+			
 			String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da Disciplina " +posicao+ "?");
 			String notaDisciplina = JOptionPane.showInputDialog("Qual a nota da Disciplina " +posicao+ "?");		
 			
@@ -48,7 +49,13 @@ public class PrimeiraClasseJavaPoo {
 			aluno1.getDisciplinas().add(disciplina);
 		}
 		
-
+		int escolhaUsuario = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		
+		if(escolhaUsuario == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina você deseja remover, 1, 2, 3 ou 4?");
+			
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+		}
 		
 		//Mostrando a descrição do objeto na memoria
 		System.out.println(aluno1);
