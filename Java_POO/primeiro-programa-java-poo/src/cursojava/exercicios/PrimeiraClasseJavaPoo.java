@@ -12,7 +12,7 @@ public class PrimeiraClasseJavaPoo {
 	public static void main(String[] args) {
 		
 		String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno: ");
-		/*String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
+		String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
 		String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento do aluno: ");
 		String registroGeralAluno = JOptionPane.showInputDialog("Qual o RG do aluno: ");
 		String numeroCpfAluno = JOptionPane.showInputDialog("Qual o CPF do aluno: ");
@@ -21,12 +21,12 @@ public class PrimeiraClasseJavaPoo {
 		String dataMatriculaAluno = JOptionPane.showInputDialog("Qual a data da matricula do aluno: ");
 		String serieMatriculadoAluno = JOptionPane.showInputDialog("Qual a serie do aluno: ");
 		String nomeEscolaAluno = JOptionPane.showInputDialog("Qual o nome da escola do aluno: ");
-		*/
+		
 		
 		Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
 		
 		aluno1.setNomeAluno(nomeAluno); // Utilizando o metodo set para definir o valor da variavel
-		/*aluno1.setIdadeAluno(Integer.valueOf(idadeAluno));
+		aluno1.setIdadeAluno(Integer.valueOf(idadeAluno));
 		aluno1.setDataNascimentoAluno(dataNascimentoAluno);
 		aluno1.setRegistroGeralAluno(registroGeralAluno);
 		aluno1.setNumeroCpfAluno(numeroCpfAluno);
@@ -34,7 +34,8 @@ public class PrimeiraClasseJavaPoo {
 		aluno1.setNomePaiAluno(nomePaiAluno);
 		aluno1.setDataMatriculaAluno(dataMatriculaAluno);
 		aluno1.setSerieMatriculadoAluno(serieMatriculadoAluno);
-		aluno1.setNomeEscolaAluno(nomeEscolaAluno);*/
+		aluno1.setNomeEscolaAluno(nomeEscolaAluno);
+		
 		
 		for(int posicao = 1; posicao <= 4; posicao++) {
 			
@@ -52,9 +53,16 @@ public class PrimeiraClasseJavaPoo {
 		int escolhaUsuario = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 		
 		if(escolhaUsuario == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina você deseja remover, 1, 2, 3 ou 4?");
 			
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+			int continuarRemover = 0;
+			int posicao = 1;
+			
+			while(continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina você deseja remover, 1, 2, 3 ou 4?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+				posicao++;
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover alguma disciplina?");
+			}
 		}
 		
 		//Mostrando a descrição do objeto na memoria
