@@ -18,7 +18,7 @@ public class PrimeiraClasseJavaPoo {
 
 		for (int quant = 1; quant <= 2; quant++) {
 
-			String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno "+quant+": ");
+			String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno " + quant + ": ");
 			String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
 			String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento do aluno: ");
 			String registroGeralAluno = JOptionPane.showInputDialog("Qual o RG do aluno: ");
@@ -28,7 +28,7 @@ public class PrimeiraClasseJavaPoo {
 			String dataMatriculaAluno = JOptionPane.showInputDialog("Qual a data da matricula do aluno: ");
 			String serieMatriculadoAluno = JOptionPane.showInputDialog("Qual a serie do aluno: ");
 			String nomeEscolaAluno = JOptionPane.showInputDialog("Qual o nome da escola do aluno: ");
-
+			 
 			Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
 
 			aluno1.setNomeAluno(nomeAluno); // Utilizando o metodo set para definir o valor da variavel
@@ -70,16 +70,32 @@ public class PrimeiraClasseJavaPoo {
 					continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover alguma disciplina?");
 				}
 			}
-			
+
 			alunos.add(aluno1);
 		}
-		
+
 		for (Aluno aluno : alunos) {
-			// Mostrando a descrição do objeto na memoria
-			System.out.println(aluno);
-			System.out.println("Media do aluno: " + aluno.getMediaNota());
-			System.out.println("Resultado: " + (aluno.getAlunoAprovado2()));
-			System.out.println("-----------------------------------------------");
+
+			if (aluno.getNomeAluno().equalsIgnoreCase("leo")) {
+				
+				alunos.remove(aluno);
+				break;
+			}else {
+				System.out.println(aluno);
+				System.out.println("Media do aluno: " + aluno.getMediaNota());
+				System.out.println("Resultado: " + (aluno.getAlunoAprovado2()));
+				System.out.println("-----------------------------------------------");
+			}
+		}
+		
+		for(Aluno aluno : alunos) {
+			System.out.println("Aluno que sobraram na lista:");
+			System.out.println(aluno.getNomeAluno());
+			System.out.println("Suas materias são:");
+			
+			for(Disciplina disciplina : aluno.getDisciplinas()) {
+				System.out.println(disciplina.getDisciplina());
+			}
 		}
 	}
 }
