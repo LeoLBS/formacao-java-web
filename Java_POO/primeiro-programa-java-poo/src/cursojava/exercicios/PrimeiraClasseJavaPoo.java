@@ -42,7 +42,7 @@ public class PrimeiraClasseJavaPoo {
 			aluno1.setSerieMatriculadoAluno(serieMatriculadoAluno);
 			aluno1.setNomeEscolaAluno(nomeEscolaAluno);*/
 
-			for (int posicao = 1; posicao <= 4; posicao++) {
+			for (int posicao = 1; posicao <= 1; posicao++) {
 
 				String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da Disciplina " + posicao + "?");
 				String notaDisciplina = JOptionPane.showInputDialog("Qual a nota da Disciplina " + posicao + "?");
@@ -104,6 +104,23 @@ public class PrimeiraClasseJavaPoo {
 			for(int posicao = 0; posicao < alunos.size(); posicao++) {
 				
 				Aluno aluno = alunos.get(posicao);
+				
+				if(aluno.getNomeAluno().equalsIgnoreCase("leo")) {
+					
+					Aluno trocarAluno = new Aluno();
+					
+					trocarAluno.setNomeAluno("Aluno alterado!!");
+					
+					Disciplina disciplina = new Disciplina();
+					disciplina.setDisciplina("Portugol");
+					disciplina.setNota(98);
+					
+					trocarAluno.getDisciplinas().add(disciplina);
+					
+					alunos.set(posicao, trocarAluno);
+					aluno = alunos.get(posicao);
+				}
+				
 				if(posicao >= 1) {
 					System.out.println("-----------------------------------------------");
 				}
