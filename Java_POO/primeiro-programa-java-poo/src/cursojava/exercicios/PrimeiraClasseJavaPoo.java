@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.constantes.StatusAluno;
 
 /*Aqui temos a nossa classe principal, dentro dela tem a main para executarmos no app*/
 public class PrimeiraClasseJavaPoo {
@@ -15,11 +16,15 @@ public class PrimeiraClasseJavaPoo {
 	public static void main(String[] args) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-		for (int quant = 1; quant <= 2; quant++) {
+		for (int quant = 1; quant <= 5; quant++) {
 
 			String nomeAluno = JOptionPane.showInputDialog("Qual o nome do aluno " + quant + ": ");
-			String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
+			/*String idadeAluno = JOptionPane.showInputDialog("Qual a idade do aluno: ");
 			String dataNascimentoAluno = JOptionPane.showInputDialog("Qual a data de nascimento do aluno: ");
 			String registroGeralAluno = JOptionPane.showInputDialog("Qual o RG do aluno: ");
 			String numeroCpfAluno = JOptionPane.showInputDialog("Qual o CPF do aluno: ");
@@ -27,12 +32,12 @@ public class PrimeiraClasseJavaPoo {
 			String nomePaiAluno = JOptionPane.showInputDialog("Qual o nome do pai do aluno: ");
 			String dataMatriculaAluno = JOptionPane.showInputDialog("Qual a data da matricula do aluno: ");
 			String serieMatriculadoAluno = JOptionPane.showInputDialog("Qual a serie do aluno: ");
-			String nomeEscolaAluno = JOptionPane.showInputDialog("Qual o nome da escola do aluno: ");
+			String nomeEscolaAluno = JOptionPane.showInputDialog("Qual o nome da escola do aluno: ");*/
 			 
 			Aluno aluno1 = new Aluno(); // Criando e definindo o objeto na memoria
 
 			aluno1.setNomeAluno(nomeAluno); // Utilizando o metodo set para definir o valor da variavel
-			aluno1.setIdadeAluno(Integer.valueOf(idadeAluno));
+			/*aluno1.setIdadeAluno(Integer.valueOf(idadeAluno));
 			aluno1.setDataNascimentoAluno(dataNascimentoAluno);
 			aluno1.setRegistroGeralAluno(registroGeralAluno);
 			aluno1.setNumeroCpfAluno(numeroCpfAluno);
@@ -40,7 +45,7 @@ public class PrimeiraClasseJavaPoo {
 			aluno1.setNomePaiAluno(nomePaiAluno);
 			aluno1.setDataMatriculaAluno(dataMatriculaAluno);
 			aluno1.setSerieMatriculadoAluno(serieMatriculadoAluno);
-			aluno1.setNomeEscolaAluno(nomeEscolaAluno);
+			aluno1.setNomeEscolaAluno(nomeEscolaAluno);*/
 
 			for (int posicao = 1; posicao <= 1; posicao++) {
 
@@ -74,67 +79,31 @@ public class PrimeiraClasseJavaPoo {
 			alunos.add(aluno1);
 		}
 		
-		String formaDados = JOptionPane.showInputDialog("Qual forma você deseja ver os dados, 1 - ForEach ou 2 - Size: ");
-		if(Integer.parseInt(formaDados) == 1 ) {
-			for (Aluno aluno : alunos) {
-
-				if (aluno.getNomeAluno().equalsIgnoreCase("leo")) {
-					
-					alunos.remove(aluno);
-					break;
-				}else {
-					System.out.println(aluno);
-					System.out.println("Media do aluno: " + aluno.getMediaNota());
-					System.out.println("Resultado: " + (aluno.getAlunoAprovado2()));
-					System.out.println("-----------------------------------------------");
-				}
-			}
-			
-			for(Aluno aluno : alunos) {
-				
-				System.out.println("Aluno que sobraram na lista:");
-				System.out.println(aluno.getNomeAluno());
-				System.out.println("Suas materias são:");
-				
-				for(Disciplina disciplina : aluno.getDisciplinas()) {
-					System.out.println(disciplina.getDisciplina());
-				}
-			}
-		}else if(Integer.parseInt(formaDados) == 2 ) {
-			for(int posicao = 0; posicao < alunos.size(); posicao++) {
-				
-				Aluno aluno = alunos.get(posicao);
-				
-				if(aluno.getNomeAluno().equalsIgnoreCase("leo")) {
-					
-					Aluno trocarAluno = new Aluno();
-					
-					trocarAluno.setNomeAluno("Aluno alterado!!");
-					
-					Disciplina disciplina = new Disciplina();
-					disciplina.setDisciplina("Portugol");
-					disciplina.setNota(98);
-					
-					trocarAluno.getDisciplinas().add(disciplina);
-					
-					alunos.set(posicao, trocarAluno);
-					aluno = alunos.get(posicao);
-				}
-				
-				if(posicao >= 1) {
-					System.out.println("-----------------------------------------------");
-				}
-				System.out.println("Aluno: " + aluno.getNomeAluno());
-				System.out.println("Media do aluno: " + aluno.getMediaNota());
-				System.out.println("Resultado: " + aluno.getAlunoAprovado2());
-				System.out.println("-----------------------------------------------");
-				
-				for(int posicao2 = 0; posicao2 < aluno.getDisciplinas().size(); posicao2++) {
-					
-					Disciplina disciplina = aluno.getDisciplinas().get(posicao2);
-					System.out.println("Meteria: " + disciplina.getDisciplina() + " Nota: " + disciplina.getNota());
-				}
+		for (Aluno aluno : alunos) {
+			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)){
+				alunosAprovados.add(aluno);
+			}else 
+			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+				alunosRecuperacao.add(aluno);
+			}else {
+				alunosReprovados.add(aluno);
 			}
 		}
+		
+		System.out.println("-----------------------Alunos Aprovados------------------");
+		for (Aluno aluno : alunosAprovados) {
+			System.out.println("Aluno: "+ aluno.getNomeAluno() +", resultado: " + aluno.getAlunoAprovado2() + ", com media: " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-----------------------Alunos Recuperacao------------------");
+		for (Aluno aluno : alunosRecuperacao) {
+			System.out.println("Aluno: "+ aluno.getNomeAluno() +", resultado: " + aluno.getAlunoAprovado2() + ", com media: " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-----------------------Alunos Reprovados------------------");
+		for (Aluno aluno : alunosReprovados) {
+			System.out.println("Aluno: "+ aluno.getNomeAluno() +", resultado: " + aluno.getAlunoAprovado2() + ", com media: " + aluno.getMediaNota());
+		}
+		
 	}
 }
