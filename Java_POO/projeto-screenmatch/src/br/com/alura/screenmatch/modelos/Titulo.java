@@ -1,6 +1,10 @@
 package br.com.alura.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+import br.com.alura.screenmatch.excecoes.ExcecaoNoAnoDeLancamento;
+
 public class Titulo implements Comparable<Titulo>{
+
     private String nomeDoTitulo;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -11,6 +15,16 @@ public class Titulo implements Comparable<Titulo>{
     public Titulo(String nomeDoTitulo, int anoDeLancamento) {
         this.nomeDoTitulo = nomeDoTitulo;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+
+        if(meuTituloOmdb.year().length() > 4){
+            throw new ExcecaoNoAnoDeLancamento("Não foi possivel definir o ano de lançamento!!");
+        }
+        this.nomeDoTitulo = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,3));
     }
 
     public int getTotalDeAvaliacoes(){
@@ -66,4 +80,12 @@ public class Titulo implements Comparable<Titulo>{
         return getNomeDoTitulo().compareTo(outroTitulo.getNomeDoTitulo());
     }
 
+    @Override
+    public String toString() {
+        return "Titulo{" +
+                "Nome do Titulo='" + nomeDoTitulo + '\'' +
+                ", Ano De Lancamento=" + anoDeLancamento +
+                ", Duração="+duracaoEmMinutos +
+                '}';
+    }
 }
