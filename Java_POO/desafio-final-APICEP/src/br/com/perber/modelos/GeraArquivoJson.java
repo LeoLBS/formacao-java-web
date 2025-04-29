@@ -13,10 +13,10 @@ public class GeraArquivoJson {
             .setPrettyPrinting()
             .create();
 
-    public GeraArquivoJson( List<ApiCep> apiCep) {
+    public GeraArquivoJson( List<ApiCepViaCep> listaCeps) {
         try {
             FileWriter escrita = new FileWriter("Ceps.json");
-            escrita.write(gson.toJson(apiCep));
+            escrita.write(gson.toJson(listaCeps));
             escrita.close();
         }catch (IOException e){
             System.out.println("Erro: " + e.getMessage());

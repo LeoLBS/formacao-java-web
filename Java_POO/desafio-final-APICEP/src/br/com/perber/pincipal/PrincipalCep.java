@@ -1,6 +1,8 @@
 package br.com.perber.pincipal;
 
 import br.com.perber.modelos.ApiCep;
+import br.com.perber.modelos.ApiCepViaCep;
+import br.com.perber.modelos.GeraArquivoJson;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -15,18 +17,14 @@ public class PrincipalCep {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner leitura = new Scanner(System.in);
         int cepBusca;
-        int opcaoCep;
+        int opcaoCep = 1;
         String gerarArquivo;
+        ApiCep apiCep;
+        ApiCepViaCep viaCep;
 
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .setPrettyPrinting()
-                .excludeFieldsWithoutExposeAnnotation()
-                .create();
+        List<ApiCepViaCep> listaCeps = new ArrayList<>();
 
-        List<ApiCep> listaApiCeps = new ArrayList<>();
-
-        do {
+        while(opcaoCep != 0){
             System.out.println("""
                                 Escolha uma opção: 
                                 1 - Buscar CEP
@@ -38,28 +36,22 @@ public class PrincipalCep {
             System.out.println("Informe um Cep que quer buscar: ");
             cepBusca = leitura.nextInt();
 
-            ApiCep apiCep = new ApiCep(cepBusca);
+            apiCep = new ApiCep();
 
-            listaApiCeps.add(apiCep);
+            viaCep = apiCep.buscaCep(cepBusca);
 
+            System.out.println(viaCep.toString());
 
-            System.out.println(apiCep.toString());
+            listaCeps.add(viaCep);
 
-        }while(opcaoCep != 0);
+        };
 
-        for(ApiCep apicepe : listaApiCeps){
-            System.out.println(apicepe.toString());
-        }
-
-        FileWriter escrita = new FileWriter("Ceps.json");
-        escrita.write(gson.toJson(listaApiCeps));
-        escrita.close();
-
-        /*System.out.println("Deseja gerar um arquivo JSON com as Informações?");
+        System.out.println("Deseja gerar um arquivo JSON com as Informações?");
         gerarArquivo = leitura.next();
 
         if(gerarArquivo.equalsIgnoreCase("sim") || gerarArquivo.equalsIgnoreCase("s")){
-            GeraArquivoJson geraArquivoJson = new GeraArquivoJson(listaApiCeps);
-        }*/
+            GeraArquivoJson geraArquivoJson = new GeraArquivoJson(listaCeps);
+        }
+
     }
 }

@@ -1,4 +1,26 @@
 [
-  {},
-  {}
+  {
+    "logradouro": "Rua Parintins",
+    "bairro": "Jardim Presidencial",
+    "localidade": "Ji-Paraná",
+    "uf": "RO",
+    "estado": "Rondônia",
+    "ddd": 69
+  },
+  {
+    "logradouro": "Rua Manoel Frigo",
+    "bairro": "Distrito de Iguatemi (Iguatemi)",
+    "localidade": "Maringá",
+    "uf": "PR",
+    "estado": "Paraná",
+    "ddd": 44
+  },
+  {
+    "logradouro": "Parque Capital Digital Lote 3",
+    "bairro": "Zona Industrial",
+    "localidade": "Brasília",
+    "uf": "DF",
+    "estado": "Distrito Federal",
+    "ddd": 61
+  }
 ]
