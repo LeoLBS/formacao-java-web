@@ -17,7 +17,7 @@ public class ScreenmatchApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		var apiKey = "859ff2ff";
+		var apiKey = "APIKey";
 
 		var consumoApi = new ConsumoApi();
 
